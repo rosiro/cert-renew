@@ -1,4 +1,4 @@
-# 主な機能
+# 
 
 引数で複数ドメイン指定可能  
 nginx / Apache を自動検出して再読み込み  
@@ -14,3 +14,8 @@ sudo crontab -e で毎日AM3:00実行に設定
 certbot renew --dry-run でドライラン確認
 ```
 
+### cron
+
+```
+0 3 * * 0 /usr/local/bin/renew_ssl.sh example.com >> /var/log/certbot-renew.log 2>&1
+```
